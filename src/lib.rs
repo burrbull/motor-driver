@@ -3,6 +3,7 @@
 #![deny(missing_docs)]
 #![deny(warnings)]
 #![no_std]
+#![allow(unused_must_use)]
 
 extern crate embedded_hal;
 
@@ -10,7 +11,7 @@ pub mod ic;
 
 use core::marker::PhantomData;
 
-use embedded_hal::digital::OutputPin;
+use embedded_hal::digital::v2::OutputPin;
 use embedded_hal::PwmPin;
 
 /// A full H-bridge motor driver
